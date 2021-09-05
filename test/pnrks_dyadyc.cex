@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptualSystem>
+  <Version MajorNumber="1" MinorNumber="0" />
+  <Contexts>
+    <Context Identifier="0" Type="Binary">
+      <Attributes>
+        <Attribute Identifier="0">
+          <Name>P-a</Name>
+        </Attribute>
+        <Attribute Identifier="1">
+          <Name>P-b</Name>
+        </Attribute>
+        <Attribute Identifier="2">
+          <Name>P-c</Name>
+        </Attribute>
+        <Attribute Identifier="3">
+          <Name>P-d</Name>
+        </Attribute>
+        <Attribute Identifier="4">
+          <Name>N-a</Name>
+        </Attribute>
+        <Attribute Identifier="5">
+          <Name>N-b</Name>
+        </Attribute>
+        <Attribute Identifier="6">
+          <Name>N-c</Name>
+        </Attribute>
+        <Attribute Identifier="7">
+          <Name>N-d</Name>
+        </Attribute>
+        <Attribute Identifier="8">
+          <Name>R-a</Name>
+        </Attribute>
+        <Attribute Identifier="9">
+          <Name>R-b</Name>
+        </Attribute>
+        <Attribute Identifier="10">
+          <Name>R-c</Name>
+        </Attribute>
+        <Attribute Identifier="11">
+          <Name>R-d</Name>
+        </Attribute>
+        <Attribute Identifier="12">
+          <Name>K-a</Name>
+        </Attribute>
+        <Attribute Identifier="13">
+          <Name>K-b</Name>
+        </Attribute>
+        <Attribute Identifier="14">
+          <Name>K-c</Name>
+        </Attribute>
+        <Attribute Identifier="15">
+          <Name>K-d</Name>
+        </Attribute>
+        <Attribute Identifier="16">
+          <Name>S-a</Name>
+        </Attribute>
+        <Attribute Identifier="17">
+          <Name>S-b</Name>
+        </Attribute>
+        <Attribute Identifier="18">
+          <Name>S-c</Name>
+        </Attribute>
+        <Attribute Identifier="19">
+          <Name>S-d</Name>
+        </Attribute>
+      </Attributes>
+      <Objects>
+        <Object>
+          <Name>1</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="12" />
+            <HasAttribute AttributeIdentifier="13" />
+            <HasAttribute AttributeIdentifier="4" />
+            <HasAttribute AttributeIdentifier="5" />
+            <HasAttribute AttributeIdentifier="7" />
+            <HasAttribute AttributeIdentifier="0" />
+            <HasAttribute AttributeIdentifier="1" />
+            <HasAttribute AttributeIdentifier="3" />
+            <HasAttribute AttributeIdentifier="8" />
+            <HasAttribute AttributeIdentifier="10" />
+            <HasAttribute AttributeIdentifier="16" />
+          </Intent>
+        </Object>
+        <Object>
+          <Name>2</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="12" />
+            <HasAttribute AttributeIdentifier="15" />
+            <HasAttribute AttributeIdentifier="5" />
+            <HasAttribute AttributeIdentifier="6" />
+            <HasAttribute AttributeIdentifier="7" />
+            <HasAttribute AttributeIdentifier="0" />
+            <HasAttribute AttributeIdentifier="3" />
+            <HasAttribute AttributeIdentifier="8" />
+            <HasAttribute AttributeIdentifier="9" />
+            <HasAttribute AttributeIdentifier="11" />
+            <HasAttribute AttributeIdentifier="19" />
+          </Intent>
+        </Object>
+        <Object>
+          <Name>3</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="12" />
+            <HasAttribute AttributeIdentifier="13" />
+            <HasAttribute AttributeIdentifier="7" />
+            <HasAttribute AttributeIdentifier="0" />
+            <HasAttribute AttributeIdentifier="1" />
+            <HasAttribute AttributeIdentifier="3" />
+            <HasAttribute AttributeIdentifier="8" />
+            <HasAttribute AttributeIdentifier="9" />
+            <HasAttribute AttributeIdentifier="16" />
+          </Intent>
+        </Object>
+        <Object>
+          <Name>4</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="12" />
+            <HasAttribute AttributeIdentifier="13" />
+            <HasAttribute AttributeIdentifier="5" />
+            <HasAttribute AttributeIdentifier="7" />
+            <HasAttribute AttributeIdentifier="0" />
+            <HasAttribute AttributeIdentifier="1" />
+            <HasAttribute AttributeIdentifier="3" />
+            <HasAttribute AttributeIdentifier="8" />
+            <HasAttribute AttributeIdentifier="9" />
+            <HasAttribute AttributeIdentifier="19" />
+          </Intent>
+        </Object>
+        <Object>
+          <Name>5</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="12" />
+            <HasAttribute AttributeIdentifier="13" />
+            <HasAttribute AttributeIdentifier="14" />
+            <HasAttribute AttributeIdentifier="4" />
+            <HasAttribute AttributeIdentifier="7" />
+            <HasAttribute AttributeIdentifier="0" />
+            <HasAttribute AttributeIdentifier="3" />
+            <HasAttribute AttributeIdentifier="8" />
+            <HasAttribute AttributeIdentifier="9" />
+            <HasAttribute AttributeIdentifier="11" />
+            <HasAttribute AttributeIdentifier="16" />
+          </Intent>
+        </Object>
+      </Objects>
+    </Context>
+  </Contexts>
+</ConceptualSystem>
