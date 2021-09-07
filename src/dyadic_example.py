@@ -3,7 +3,7 @@ from fcatools.dyadic import dyadic_io
 
 def main():
 
-    dyadic_context = dyadic_io.read_dyadic_context_data(path='pnrks_dyadic.data')
+    dyadic_context = dyadic_io.read_dyadic_context_data(path='data_examples/pnrks_dyadic.data')
 
     objects = dyadic_context.objects
     attributes = dyadic_context.attributes
