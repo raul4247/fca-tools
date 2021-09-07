@@ -9,4 +9,18 @@
 # Bônus:
 * Geração de contextos sintéticos:
 https://www.researchgate.net/publication/271477874_SCGaz_-_A_Synthetic_Formal_Context_Generator_with_Density_Control_for_Test_and_Evaluation_of_FCA_Algorithms
-  
+
+
+# Como usar com o Docker:
+
+1. Instale o docker na sua máquina;
+2. `docker build -t fca-tools-container .`
+
+* Para executar o ambiente: `docker run -i -t fca-tools-container:latest /bin/bash`
+* Para sair: `ctrl + z> ou <ctrl + c>`
+
+* Para parar o serviço: `docker stop <container-id>`
+* Para reiniciar o serviço: `docker restart <container-id>`
+* Para entrar no shell: `docker exec -it <container-id> /bin/bash`
+
+(Internamente, utilize o `python3`)

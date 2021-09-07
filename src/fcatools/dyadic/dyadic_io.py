@@ -4,7 +4,6 @@ import xmltodict
 from fcatools.dyadic.DyadicContext import DyadicContext
 from fcatools.dyadic.DyadicIncidence import DyadicIncidence
 
-
 def read_dyadic_context_data(path, entries_delimiter=' ', attrs_delimiter=',') -> DyadicContext:
     input_file = open(path, 'r')
     rdr = csv.reader(input_file, delimiter=entries_delimiter)

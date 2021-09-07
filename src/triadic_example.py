@@ -3,7 +3,7 @@ from fcatools.triadic import triadic_io, triadic_flat
 
 def main():
 
-    triadic_context = triadic_io.read_triadic_context_data(path='pnrks_triadic.data')
+    triadic_context = triadic_io.read_triadic_context_data(path='data_examples/pnrks_triadic.data')
 
     objects = triadic_context.objects
     attributes = triadic_context.attributes
