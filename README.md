@@ -17,6 +17,10 @@ https://www.researchgate.net/publication/271477874_SCGaz_-_A_Synthetic_Formal_Co
 2. `docker build -t fca-tools-container .`
 
 * Para executar o ambiente: `docker run -i -t fca-tools-container:latest /bin/bash`
-* Para sair: `exit`
+* Para sair: `ctrl + z> ou <ctrl + c>`
+
+* Para parar o serviço: `docker stop <container-id>`
+* Para reiniciar o serviço: `docker restart <container-id>`
+* Para entrar no shell: `docker exec -it <container-id> /bin/bash`
 
 (Internamente, utilize o `python3`)
