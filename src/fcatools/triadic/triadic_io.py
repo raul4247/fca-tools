@@ -44,7 +44,7 @@ def read_triadic_context_data(path, entries_delimiter=' ', conditions_delimiter=
 
 
 def write_triadic_context_data(triadic_context: TriadicContext, path, entries_delimiter=' ', conditions_delimiter=','):
-    with open(path, mode='w', newline='', encoding='utf-8') as triadic_file:
+    with open(path, mode='pnrks_concepts.txt', newline='', encoding='utf-8') as triadic_file:
         writer = csv.writer(triadic_file, delimiter=entries_delimiter)
 
         for i in triadic_context.incidences:

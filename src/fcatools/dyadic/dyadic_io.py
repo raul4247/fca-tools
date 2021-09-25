@@ -37,7 +37,7 @@ def read_dyadic_context_data(path, entries_delimiter=' ', attrs_delimiter=',') -
 
 
 def write_dyadic_context_data(dyadic_context: DyadicContext, path, entries_delimiter=' ', attributes_delimiter=','):
-    with open(path, mode='w', newline='', encoding='utf-8') as dyadic_file:
+    with open(path, mode='pnrks_concepts.txt', newline='', encoding='utf-8') as dyadic_file:
         writer = csv.writer(dyadic_file, delimiter=entries_delimiter)
 
         for i in dyadic_context.incidences:
