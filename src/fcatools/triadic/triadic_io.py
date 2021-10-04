@@ -1,7 +1,7 @@
 import csv
 
-from fcatools.triadic.TriadicContext import TriadicContext
-from fcatools.triadic.TriadicIncidence import TriadicIncidence
+from src.fcatools.triadic.model.TriadicContext import TriadicContext
+from src.fcatools.triadic.model.TriadicIncidence import TriadicIncidence
 
 
 def read_triadic_context_data(path, entries_delimiter=' ', conditions_delimiter=',') -> TriadicContext:
@@ -49,6 +49,6 @@ def write_triadic_context_data(triadic_context: TriadicContext, path, entries_de
 
         for i in triadic_context.incidences:
             conditions = conditions_delimiter.join(i.conditions)
-            writer.writerow([i.obj, i.attr, conditions])
+            writer.writerow([i.objects, i.attr, conditions])
 
     triadic_file.close()

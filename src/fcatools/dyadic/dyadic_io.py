@@ -21,7 +21,7 @@ def read_dyadic_context_data(path, entries_delimiter=' ', attrs_delimiter=',') -
         if obj not in objects:
             objects.append(obj)
 
-        incidence.obj = obj
+        incidence.objects = obj
 
         for attr in str(rec[1].strip()).split(attrs_delimiter):
             if attr not in attributes:
@@ -42,7 +42,7 @@ def write_dyadic_context_data(dyadic_context: DyadicContext, path, entries_delim
 
         for i in dyadic_context.incidences:
             attrs = attributes_delimiter.join(i.attrs)
-            writer.writerow([i.obj, attrs])
+            writer.writerow([i.objects, attrs])
 
     dyadic_file.close()
 
@@ -80,7 +80,7 @@ def read_dyadic_context_cex(path) -> DyadicContext:
                         attributes.append(new_attr)
 
                     dyadic_incidence = DyadicIncidence()
-                    dyadic_incidence.obj = new_obj
+                    dyadic_incidence.objects = new_obj
                     dyadic_incidence.attrs = [new_attr]
 
                     incidences.append(dyadic_incidence)
