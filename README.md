@@ -1,9 +1,9 @@
 # TODO
+* Verificar funcionamento correto dos algoritmos;
+* Adicionar densidade como propriedade dos contextos (ou função) (testar com conjunto da Rokia);
 * Documentação;
-* iPred;
-* Regras de implicação;
-* Geradores;
-* Adicionar densidade como propriedade dos contextos (ou função);
+* Resolver # TODOs
+* Completar texto do TCC
 
 
 # Bônus:

@@ -1,6 +1,6 @@
-from fcatools.dyadic.DyadicContext import DyadicContext
-from fcatools.dyadic.DyadicIncidence import DyadicIncidence
-from fcatools.triadic.TriadicContext import TriadicContext
+from src.fcatools.dyadic.models.DyadicContext import DyadicContext
+from src.fcatools.dyadic.models.DyadicIncidence import DyadicIncidence
+from src.fcatools.triadic.model.TriadicContext import TriadicContext
 
 
 def flat_triadic_to_dyadic(triadic_context: TriadicContext, divider='.') -> DyadicContext:
