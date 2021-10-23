@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
+
+from typing import List, Tuple
+
 from src.fcatools.consts import EMPTY_VALUE
+from src.fcatools.dyadic.models.DyadicConcept import DyadicConcept
 from src.fcatools.dyadic.models.DyadicLattice import DyadicLattice
+from src.fcatools.dyadic.models.DyadicLink import DyadicLink
 
 
-def build_lattice_iPred(concepts) -> DyadicLattice:
-    links_count = 0
-    attributes = concepts.values()
-    attributes = [i for i in attributes]
+def build_lattice_iPred(concepts: List[DyadicConcept]) -> Tuple[DyadicLattice, List[DyadicLink]]:
+    attributes = [c.attrs for c in concepts]
 
     attributes.sort(key=len)
 
@@ -35,11 +38,24 @@ def build_lattice_iPred(concepts) -> DyadicLattice:
             delta_intersection = Ci & faces[frozenset(element)]
             if len(delta_intersection) == 0 or delta_intersection == empty_set:
                 concepts_lattice.add_connection(Ci, set(element), concepts)
-                links_count += 1
-                links.append([Ci, set(element)])
+
+                links.append(
+                    DyadicLink(
+                        __getObjectFromAttr(Ci, concepts),
+                        __getObjectFromAttr(frozenset(element), concepts)
+                    )
+                )
                 faces[frozenset(element)] = (faces[frozenset(element)] | (Ci - set(element))) - empty_set
                 border = (border - frozenset({element})) - empty_set
 
         border = border | {Ci}
 
-    return concepts_lattice
+    return concepts_lattice, links
+
+
+def __getObjectFromAttr(attrs: frozenset, concepts: List[DyadicConcept]) -> frozenset:
+    for c in concepts:
+        if c.attrs == attrs:
+            return c.objects
+
+    return frozenset(EMPTY_VALUE)

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 class TriadicIncidence:
     def __init__(self):
         self.obj = None
@@ -5,4 +7,4 @@ class TriadicIncidence:
         self.conditions = []
 
     def __repr__(self):
-        return f'Obj: {self.obj} Attr: {self.attr} Cond: {self.conditions}'
+        return f'obj, attr, cond = ({self.obj}), ({self.attr}), ({self.conditions})'

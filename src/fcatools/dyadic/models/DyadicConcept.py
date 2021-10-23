@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from typing import List
 
 from src.fcatools.consts import EMPTY_VALUE
@@ -5,8 +7,8 @@ from src.fcatools.consts import EMPTY_VALUE
 
 class DyadicConcept:
     def __init__(self, objects, attrs):
-        self.objects = objects
-        self.attrs = attrs
+        self.objects: frozenset = objects
+        self.attrs: frozenset = attrs
         self.parents: List[DyadicConcept] = []
         self.children: List[DyadicConcept] = []
 

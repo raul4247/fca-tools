@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 class DyadicAssociationRule:
     def __init__(self, generator, potential_cons, support, confidence):
         self.generator = generator
@@ -6,4 +8,4 @@ class DyadicAssociationRule:
         self.confidence = confidence
 
     def __repr__(self):
-        return f'{self.generator} -> {self.potential_cons} (sup: {self.support}, conf: {self.confidence})'
+        return f'{list(self.generator)} -> {self.potential_cons} (sup: {self.support}, conf: {self.confidence})'

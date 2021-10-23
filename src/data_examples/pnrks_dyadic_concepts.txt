@@ -17,4 +17,4 @@
 5 P-a,P-d,N-d,R-a,K-a,K-b,S-a,N-a,K-c,R-d,R-b
 2 P-a,P-d,N-d,R-a,K-a,N-b,K-d,R-d,R-b,S-d,N-c
 1 P-a,P-d,N-d,R-a,K-a,N-b,R-c,N-a,K-b,S-a,P-b
-ø P-a,P-d,N-d,R-a,K-a,N-b,R-c,N-a,K-b,S-a,P-b,K-c,R-b,S-d,R-d,N-c,K-d,S-b,S-c,P-c
+ø P-a,P-d,N-d,R-a,K-a,N-b,R-c,N-a,K-b,S-a,P-b,K-c,R-b,S-d,R-d,N-c,K-d
