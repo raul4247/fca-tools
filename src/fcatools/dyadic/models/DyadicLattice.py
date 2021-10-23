@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from typing import Dict
 
 from src.fcatools.consts import EMPTY_VALUE
@@ -9,7 +11,7 @@ class DyadicLattice:
         self.lattice: Dict[frozenset, DyadicConcept] = {}
 
     def add_connection(self, intent_1, intent_2, concepts):
-        concepts_reversed = {attr: obj for obj, attr in concepts.items()}
+        concepts_reversed = {i.attrs: i.objects for i in concepts}
 
         intent_1 = frozenset(intent_1)
         intent_2 = frozenset(intent_2)

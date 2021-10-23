@@ -1,5 +1,5 @@
 from fcatools.triadic import triadic_io, triadic_flat
-from src.fcatools.dyadic import dyadic_concept, dyadic_lattice, dyadic_generators, dyadic_rules
+from src.fcatools.dyadic import dyadic_concepts, dyadic_lattice, dyadic_generators, dyadic_rules
 from src.fcatools.triadic import triadic_rules
 
 
@@ -22,7 +22,7 @@ def main():
     print(dyadic_context.attributes)
     # triadic_io.write_triadic_context_csv(triadic_context, "triadic.data")
 
-    concepts = dyadic_concept.read_concepts_from_file(output_file='pnrks_concepts.txt')
+    concepts = dyadic_concepts.read_concepts_from_file(output_file='data_examples/pnrks_dyadic_concepts.txt')
     print(concepts)
 
     lattice = dyadic_lattice.build_lattice_iPred(concepts)

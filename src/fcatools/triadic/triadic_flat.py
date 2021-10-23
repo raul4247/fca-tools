@@ -1,10 +1,12 @@
+# -*- coding: utf-8 -*-
+
 from src.fcatools.dyadic.models.DyadicContext import DyadicContext
 from src.fcatools.dyadic.models.DyadicIncidence import DyadicIncidence
-from src.fcatools.triadic.model.TriadicContext import TriadicContext
+from src.fcatools.triadic.models.TriadicContext import TriadicContext
 
 
 def flat_triadic_to_dyadic(triadic_context: TriadicContext, divider='.') -> DyadicContext:
-    incidences = []
+    incidences = {}
     objects = []
     attributes = []
 
@@ -24,10 +26,17 @@ def flat_triadic_to_dyadic(triadic_context: TriadicContext, divider='.') -> Dyad
 
             dyadic_attrs.append(dyadic_attr)
 
-        dyadic_incidence = DyadicIncidence()
-        dyadic_incidence.obj = obj
-        dyadic_incidence.attrs = dyadic_attrs
+        if obj not in incidences:
+            incidences[obj] = [a for a in dyadic_attrs]
+        else:
+            incidences[obj] += dyadic_attrs
 
-        incidences.append(dyadic_incidence)
+    dyadic_incidences = []
 
-    return DyadicContext(incidences, objects, attributes)
+    for obj, attr in incidences.items():
+        d = DyadicIncidence()
+        d.obj = obj
+        d.attrs = attr
+        dyadic_incidences.append(d)
+
+    return DyadicContext(dyadic_incidences, objects, attributes)

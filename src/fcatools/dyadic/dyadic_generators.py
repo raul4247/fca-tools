@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
+from typing import List
 
+from src.fcatools.dyadic.models.DyadicGenerator import DyadicGenerator
 from src.fcatools.dyadic.models.DyadicLattice import DyadicLattice
 
 
-def compute_generators(dyadic_lattice: DyadicLattice):
-    generators = {}
+def compute_generators(dyadic_lattice: DyadicLattice) -> List[DyadicGenerator]:
+    generators: List[DyadicGenerator] = []
 
     for extent, concept in dyadic_lattice.lattice.items():
         gen = []
@@ -51,6 +53,6 @@ def compute_generators(dyadic_lattice: DyadicLattice):
             else:
                 gen = [frozenset({i}) for i in concept.attrs]
 
-        generators[concept.attrs] = gen
+        generators.append(DyadicGenerator(concept.attrs, gen))
 
     return generators

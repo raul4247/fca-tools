@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
+
 from typing import List, Tuple
 
 from src.fcatools.dyadic.models.DyadicAssociationRule import DyadicAssociationRule
-from src.fcatools.triadic.model.TriadicAssociationRule import TriadicAssociationRule
+from src.fcatools.triadic.models.TriadicAssociationRule import TriadicAssociationRule
 
 
 def calculate_bacars_from_dyadic_rules(
@@ -64,12 +66,12 @@ def calculate_bcaars_from_dyadic_rules(
                 separator
             )
 
-            if len(bcaars) > 0 and bcaars[0]['confidence'] == 1.0:
+            if len(bcaars) > 0 and bcaars[0].confidence == 1.0:
                 implication_bcaars += bcaars
             else:
                 association_bcaars += bcaars
 
-        return implication_bcaars, association_bcaars
+    return implication_bcaars, association_bcaars
 
 
 def __bacars_algorithm(al, ml, rhs, support, confidence, separator) -> List[TriadicAssociationRule]:
