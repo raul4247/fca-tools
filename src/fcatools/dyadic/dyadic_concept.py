@@ -49,6 +49,9 @@ class DyadicConcept:
 
         return concepts
 
+    def __str__(self) -> str:
+        return f'{self.objects} - {self.attrs}'
+
     def __repr__(self) -> str:
-        return f'DyadicConcept({self.objects}, {self.attributes})'
+        return f'DyadicConcept({self.objects}, {self.attrs})'
         

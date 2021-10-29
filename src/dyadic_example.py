@@ -5,6 +5,7 @@
 from fcatools.dyadic.dyadic_context import DyadicContext
 from fcatools.dyadic.dyadic_concept import DyadicConcept
 from fcatools.dyadic.dyadic_lattice import DyadicLattice
+from fcatools.triadic.triadic_association_rule import TriadicAssociationRule as tar
 
 def main():
 
@@ -27,30 +28,38 @@ def main():
 
     lattice, links = DyadicLattice.build_lattice_iPred(concepts)
     print(f'Lattice created {len(links)} links between concepts')
+    print('')
 
     generators = lattice.compute_generators()
     print(f'Generators count: {len(generators)}')
     for generator in generators:
         print(generator)
 
+    print('')
     rules = lattice.compute_association_rules(generators)
     print(f'Rules count: {len(rules)}')
     for rule in rules:
         print(rule)
 
-    # impl_bacars, assoc_bacars = triadic_rules.calculate_bacars_from_dyadic_rules(rules, '-')
-    # print(f'BACARS (implication) count: {len(impl_bacars)}')
-    # print(f'BACARS (association) count: {len(assoc_bacars)}')
+    print('')
+    impl_bacars, assoc_bacars = tar.calculate_bacars_from_dyadic_rules(rules, '-')
+    print(f'BACARS (implication) count: {len(impl_bacars)}')
+    print(f'BACARS (association) count: {len(assoc_bacars)}')
 
-    # print(impl_bacars)
-    # print(assoc_bacars)
+    for impl in impl_bacars:
+        print(impl)
+    for assoc in assoc_bacars:
+        print(assoc)
 
-    # impl_bcaars, assoc_bcaars = triadic_rules.calculate_bcaars_from_dyadic_rules(rules, '-')
-    # print(f'BCAARS (implication) count: {len(impl_bcaars)}')
-    # print(f'BCAARS (association) count: {len(assoc_bcaars)}')
+    print('')
+    impl_bcaars, assoc_bcaars = tar.calculate_bcaars_from_dyadic_rules(rules, '-')
+    print(f'BCAARS (implication) count: {len(impl_bcaars)}')
+    print(f'BCAARS (association) count: {len(assoc_bcaars)}')
 
-    # print(impl_bcaars)
-    # print(assoc_bcaars)
+    for impl in impl_bcaars:
+        print(impl)
+    for assoc in assoc_bcaars:
+        print(assoc)
 
 
 if __name__ == '__main__':

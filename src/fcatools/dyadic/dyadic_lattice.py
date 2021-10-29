@@ -61,21 +61,17 @@ class DyadicLattice:
 
         return len(unique_objects)
 
-    def compute_association_rules(
-            dyadic_lattice: DyadicLattice,
-            generators: List[DyadicGenerator]
-    ) -> List[DyadicAssociationRule]:
-
+    def compute_association_rules(self, generators: List[DyadicGenerator]) -> List[DyadicAssociationRule]:
         rules = []
-        objects_count = dyadic_lattice.get_objects_count()
-        for extent, concept in dyadic_lattice.lattice.items():
+        objects_count = self.get_objects_count()
+        for extent, concept in self.lattice.items():
 
             for g in generators:
                 if concept.attrs == g.attrs:
                     gen = g
 
                     ant_support = len(concept.objects) / objects_count
-                    children = dyadic_lattice.lattice[concept.objects].children
+                    children = self.lattice[concept.objects].children
 
                     for attrs in gen.generator:
                         if len(children) != 0 and len(concept.attrs) != 0:
@@ -148,7 +144,7 @@ class DyadicLattice:
             generators.append(DyadicGenerator(concept.attrs, gen))
 
         return generators
-
+    
     @staticmethod
     def build_lattice_iPred(concepts: List[DyadicConcept]) -> Tuple[DyadicLattice, List[DyadicLink]]:
         attributes = [c.attrs for c in concepts]
