@@ -1,10 +1,7 @@
-# from fcatools.dyadic import dyadic_io, dyadic_concepts, dyadic_lattice
-# from src.fcatools.dyadic import dyadic_generators, dyadic_rules
-# from src.fcatools.triadic import triadic_rules
-
 from fcatools.dyadic.dyadic_context import DyadicContext
 from fcatools.dyadic.dyadic_concept import DyadicConcept
 from fcatools.dyadic.dyadic_lattice import DyadicLattice
+
 from fcatools.triadic.triadic_association_rule import TriadicAssociationRule as tar
 
 def main():

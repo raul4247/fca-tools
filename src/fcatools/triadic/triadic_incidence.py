@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 class TriadicIncidence:
     def __init__(self, obj, attr, conditions):
         self.obj = obj
